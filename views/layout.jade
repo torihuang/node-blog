@@ -1,7 +1,20 @@
 doctype html
-html
+html(lang="en")
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    nav
+      a.navbar-link(href="/")
+        |HOME
+      ul.navbar-nav
+        li
+          a.navbar-link(href="#")
+            |Login
+        li
+          a.navbar-link(href="/")
+            |Second Thing
+        li
+          a.navbar-link(href="#")
+            |Third Thing
+      block content

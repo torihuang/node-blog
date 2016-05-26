@@ -14,6 +14,15 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// XXX
+// config files
+var db = require('./config/db');
+
+// set our port
+var port = process.env.PORT || 8080;
+
+// mongoose.connect(db.url);
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -57,4 +66,10 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+// startup our app at http://localhost:8080
+app.listen(port);
+
+// shoutout to the user
+console.log('Magic happens on port ' + port);
+
+exports = module.exports = app;
