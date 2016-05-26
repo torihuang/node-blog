@@ -30,11 +30,11 @@ userSchema.statics.helloWorld = function() {
   return "Nihao!"
 }
 
-// userSchema.statics.allUsers = function() {
-//   // Find all users.
-//   console.log("ALL USERS");
-//   return this.find();
-// }
+userSchema.statics.clearAll = function() {
+  this.remove({}, function(err) {
+    console.log('collection removed')
+  });
+}
 
 // userSchema.statics.userCount = function() {
 //   var count = 0;

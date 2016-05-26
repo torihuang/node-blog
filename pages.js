@@ -14,6 +14,7 @@ console.log("FINDING USER:")
 User.find().count(function(err, count){
     console.log("Number of docs: ", count );
 });
+
 // var results = User.find({}, function(err, user) {
 //   if (err) return handleError(err);
 //   console.log(user);
