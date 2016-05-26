@@ -4,12 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require( 'mongoose' );
+
+var http = require('http');
+    db = require('./models/db');
+var users = require('./models/user');
+var pages = require('./pages');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var http = require('http');
-    db = require('./models/db');
-var pages = require('./pages');
 
 var app = express();
 
@@ -24,7 +27,7 @@ app.set('view engine', 'jade');
 // set our port
 var port = process.env.PORT || 8080;
 
-// mongoose.connect(db.url);
+mongoose.connect(db.url);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

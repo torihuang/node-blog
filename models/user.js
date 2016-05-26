@@ -36,6 +36,15 @@ userSchema.statics.helloWorld = function() {
 //   return this.find();
 // }
 
+// userSchema.statics.userCount = function() {
+//   var count = 0;
+//   this.find({}, function(err, user) {
+//       if (err) return handleError(err);
+//       count = user.length;
+//     })
+//   return count;
+// }
+
 console.log("In User model")
 
 module.exports = mongoose.model('User', userSchema);

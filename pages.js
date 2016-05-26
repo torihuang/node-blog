@@ -11,10 +11,18 @@ console.log(User.helloWorld());
 user.save();
 
 console.log("FINDING USER:")
-User.find({email: 'tori@gmail.com'}, function(err, user) {
-  if (err) return handleError(err);
-  console.log(user);
+User.find().count(function(err, count){
+    console.log("Number of docs: ", count );
 });
+// var results = User.find({}, function(err, user) {
+//   if (err) return handleError(err);
+//   console.log(user);
+//   console.log("results: " + user.length);
+// });
+// console.log(User.userCount());
+
+// console.log("results: " + results.length)
+// console.log("results: " + results[0])
 
 exports.index = function (req, res) {
   User.create({
