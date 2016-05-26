@@ -1,0 +1,5 @@
+{
+	"undefined": "localhost/ConnectionTest",
+	"dev": "localhost/ConnectionTest",
+	"prod": "localhost/ConnectionTest"
+}
