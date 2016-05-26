@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var http = require('http');
+    db = require('./models/db');
+var pages = require('./pages');
 
 var app = express();
 
@@ -16,7 +19,7 @@ app.set('view engine', 'jade');
 
 // XXX
 // config files
-var db = require('./config/db');
+// var db = require('./config/db');
 
 // set our port
 var port = process.env.PORT || 8080;
